@@ -11,7 +11,7 @@ resource "tfe_registry_module" "module_registry" {
   name         = each.key
   organization = var.tfe_org
   vcs_repo {
-    display_identifier         = each.value.repo_display_identifier
+    display_identifier         = each.value.repo_identifier
     identifier                 = each.value.repo_identifier
     oauth_token_id             = tfe_oauth_client.gh_oauth.oauth_token_id
     branch                     = each.value.repo_branch
