@@ -6,8 +6,6 @@ resource "tfe_oauth_client" "gh_oauth" {
   service_provider = "github"
 }
 
-
-
 resource "tfe_registry_module" "module_registry" {
   for_each     = var.modules_registry
   name         = each.key
