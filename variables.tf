@@ -17,7 +17,6 @@ variable "tfe_teams_api_token" {
 
 variable "modules_registry" {
   type = map(object({
-    repo_display_identifier = optional(string, null)
     repo_identifier         = string
     repo_branch             = optional(string, "")
     ghe_installation_id     = optional(string, null)
